@@ -1,0 +1,18 @@
+POST http://localhost:8383/exchangeCalculationService
+Content-Type: text/xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exc="http://exchange.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <exc:calculateExchange>
+            <!--Optional:-->
+            <arg0>
+                <amount>100</amount>
+                <!--Optional:-->
+                <fromCurrency>USD</fromCurrency>
+                <!--Optional:-->
+                <toCurrency>EGP</toCurrency>
+            </arg0>
+        </exc:calculateExchange>
+    </soapenv:Body>
+</soapenv:Envelope>
